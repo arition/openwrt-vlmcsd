@@ -2,7 +2,7 @@ openwrt-vlmcsd
 -----
 #### An OpenWRT package for vlmcsd.
 
-You can use [luci-app-vlmcsd](https://github.com/cokebar/luci-app-vlmcsd "") to control it. luci-app-vlmscd support KMS auto-activation.
+You can use [luci-app-vlmcsd](https://github.com/arition/luci-app-vlmcsd) to control it. luci-app-vlmscd support KMS auto-activation.
 
 Travis CI: [![Build Status](https://travis-ci.org/arition/openwrt-vlmcsd.svg?branch=master)](https://travis-ci.org/arition/openwrt-vlmcsd)
 
@@ -31,4 +31,4 @@ If you don't use luci-app-vlmcsd and you want vlmcsd support KMS auto activation
 Pre-compiled Download
 -----
 Your can find pre-compiled ipk:
-https://github.com/arition/openwrt-vlmcsd/tree/gh-pages
+https://github.com/arition/openwrt-repo
