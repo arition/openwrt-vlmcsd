@@ -14,9 +14,9 @@ arition's OpenWrt / LEDE repository
 ========
 Aviliable repos
 
-http://${USER}.github.io/${DEPLOYREPO}/LEDE_17.01
+https://${USER}.github.io/${DEPLOYREPO}/LEDE_17.01
 
-http://${USER}.github.io/${DEPLOYREPO}/OpenWrt_15.05
+https://${USER}.github.io/${DEPLOYREPO}/OpenWrt_15.05
 
 EOF
 mkdir -p ${OSVER}
@@ -29,10 +29,10 @@ DATE=$(date "+%Y-%m-%d")
 cat > README.md <<EOF
 OpenWrt / LEDE repository for ${OSVER}
 ========
-Binaries built from this repository on $DATE can be downloaded from http://${USER}.github.io/${DEPLOYREPO}/.
+Binaries built from this repository on $DATE can be downloaded from https://${USER}.github.io/${DEPLOYREPO}/.
 To add the repo, run
 \`\`\`
-echo "src/gz arition_repo http://${USER}.github.io/${DEPLOYREPO}/${OSVER}" >> /etc/opkg/customfeeds.conf
+echo "src/gz arition_repo https://${USER}.github.io/${DEPLOYREPO}/${OSVER}" >> /etc/opkg/customfeeds.conf
 opkg update 
 \`\`\`
 You may also need to import the key of this repo. 
@@ -41,7 +41,7 @@ To import key, run
 Openwrt 15.05 
 \`\`\`
 opkg update; opkg install ca-certificates wget libopenssl
-wget -O /tmp/805d030f380712aa http://${USER}.github.io/${DEPLOYREPO}/805d030f380712aa
+wget -O /tmp/805d030f380712aa https://${USER}.github.io/${DEPLOYREPO}/805d030f380712aa
 opkg-key add /tmp/805d030f380712aa
 \`\`\`
 LEDE 17.01 and later 
@@ -49,7 +49,7 @@ LEDE 17.01 and later
 opkg update
 opkg list-installed | grep -q uclient-fetch || opkg install uclient-fetch
 opkg list-installed | grep -q libustream || opkg install libustream-mbedtls
-wget -O /tmp/805d030f380712aa http://${USER}.github.io/${DEPLOYREPO}/805d030f380712aa
+wget -O /tmp/805d030f380712aa https://${USER}.github.io/${DEPLOYREPO}/805d030f380712aa
 opkg-key add /tmp/805d030f380712aa
 \`\`\`
 
@@ -59,6 +59,7 @@ popd
 #git pull
 git commit -a -m "Deploy Travis build $TRAVIS_BUILD_NUMBER to gh-pages"
 #git push -fq origin gh-pages:gh-pages > /dev/null 2>&1 || exit 1
+git pull
 git push -fq origin gh-pages > /dev/null 2>&1 || exit 1 # so that the key does not leak to the logs in case of errors
 #git push -f origin gh-pages:gh-pages
 echo -e "Uploaded files to gh-pages\n"
