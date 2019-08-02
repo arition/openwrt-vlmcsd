@@ -14,6 +14,8 @@ arition's OpenWrt / LEDE repository
 ========
 Aviliable repos
 
+https://${USER}.github.io/${DEPLOYREPO}/OpenWrt_18.06
+
 https://${USER}.github.io/${DEPLOYREPO}/LEDE_17.01
 
 https://${USER}.github.io/${DEPLOYREPO}/OpenWrt_15.05
