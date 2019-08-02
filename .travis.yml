@@ -63,7 +63,7 @@ env:
   - OSVER=OpenWrt_18.06   SDK_URL=https://downloads.openwrt.org/releases/18.06.1/targets/mpc85xx/generic/openwrt-sdk-18.06.1-mpc85xx-generic_gcc-7.3.0_musl.Linux-x86_64.tar.xz
 install:
 - mkdir -p $TRAVIS_BUILD_DIR/local ; cd $TRAVIS_BUILD_DIR/local
-- wget "http://archive.ubuntu.com/ubuntu/pool/main/c/ccache/ccache_3.5-1_amd64.deb"
+- wget "http://archive.ubuntu.com/ubuntu/pool/main/c/ccache/ccache_3.7.2-2_amd64.deb"
 - dpkg -x *.deb .
 - mkdir -p $TRAVIS_BUILD_DIR/cache ; cd $TRAVIS_BUILD_DIR/cache
 - wget -c $SDK_URL
